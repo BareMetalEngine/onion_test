@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Module name="AppWithLibAndTests">
+	<Project>app</Project>
+	<Project>lib</Project>
+	<Project>test</Project>
+</Module>

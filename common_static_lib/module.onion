@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Module name="CommonStaticLib">
+	<Project>app</Project>
+	<Project>static</Project>
+	<Project>dyn1</Project>
+	<Project>dyn2</Project>
+</Module>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Project>
+	<Type>Application</Type>
+	<PrivateFiles>src/*.*</PrivateFiles>
+	<Dependency>lib</Dependency>
+</Project>
