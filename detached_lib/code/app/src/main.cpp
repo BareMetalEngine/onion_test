@@ -21,7 +21,7 @@ int main()
 	if (!func)
 	{
 		std::cout << "Failed to find function in library!\n";
-		return -1;
+		return 1;
 	}
 
 	auto value = func();
@@ -41,14 +41,14 @@ int main()
 	if (!lib)
 	{
 		std::cout << "Failed to load library!\n";
-		return -1;
+		return 1;
 	}
 
 	auto func = (TFooFunc)dlsym(lib, "GetMystery");
 	if (!func)
 	{
 		std::cout << "Failed to find function in library!\n";
-		return -1;
+		return 1;
 	}
 
 	auto value = func();
