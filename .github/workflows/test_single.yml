@@ -23,8 +23,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: lukka/get-cmake@v3.23.0
       - run: |
-                git clone https://github.com/BareMetalEngine/onion.git ~/onion
+                git clone https://github.com/BareMetalEngine/onion.git ~/onion/
                 pushd ${{inputs.lib}}
-                ~/onion\onion configure
-                ~/onion\onion make
-                ~/onion\onion build
+                ~/onion/onion configure
+                ~/onion/onion make
+                ~/onion/onion build
