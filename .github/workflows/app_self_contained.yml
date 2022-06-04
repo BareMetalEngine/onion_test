@@ -1,0 +1,14 @@
+name: app_self_contained
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 5 * * *'
+  push:
+    paths:
+      - 'app_self_contained/**'
+jobs:
+  build_freetype:
+    uses: ./.github/workflows/test_single.yml
+    secrets: inherit
+    with:
+      lib: app_self_contained

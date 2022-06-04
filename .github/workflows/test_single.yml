@@ -1,0 +1,19 @@
+name: Test Single Project
+on:
+  workflow_call:
+    inputs:
+      lib:
+        required: true
+        type: string
+jobs:
+  TestWindows:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v3
+      - uses: lukka/get-cmake@v3.23.0
+      - run: |
+                git clone https://github.com/BareMetalEngine/onion.git C:\onion
+                pushd {{inputs.lib}}
+                C:\onion\onion.exe configure
+                C:\onion\onion.exe make
+                C:\onion\onion.exe build
