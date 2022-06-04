@@ -19,7 +19,7 @@ jobs:
                 git clone https://github.com/BareMetalEngine/onion.git C:\onion
                 pushd ${{inputs.lib}}
                 C:\onion\onion.exe configure
-                C:\onion\onion.exe make -config=${{matrix.config}}} -libs=${{matrix.libs}}
+                C:\onion\onion.exe make -config=${{matrix.config}} -libs=${{matrix.libs}}
                 C:\onion\onion.exe build
   TestLinux:
     runs-on: ubuntu-latest
@@ -34,5 +34,5 @@ jobs:
                 git clone https://github.com/BareMetalEngine/onion.git ~/onion/
                 pushd ${{inputs.lib}}
                 ~/onion/onion configure
-                ~/onion/onion make -config=${{matrix.config}}} -libs=${{matrix.libs}}
+                ~/onion/onion make -config=${{matrix.config}} -libs=${{matrix.libs}}
                 ~/onion/onion build
