@@ -7,7 +7,7 @@ on:
     paths:
       - 'app_self_contained/**'
 jobs:
-  build_freetype:
+  app_self_contained:
     uses: ./.github/workflows/test_single.yml
     secrets: inherit
     with:
