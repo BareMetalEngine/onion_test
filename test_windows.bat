@@ -25,31 +25,34 @@ ECHO Using onion at '%ONION%', platform '%PLATFORM%'
 
 REM ------------------------------------------------------------------------------
 
-CALL :TEST_MODULE "app_self_contained" ".bin\windows.vs2022.dev.shared.release\app.exe"
+CALL :TEST_MODULE "app_self_contained"
 if ERRORLEVEL 1 ( EXIT /B 1 )
 
-CALL :TEST_MODULE "app_with_external_static_lib" ".bin\windows.vs2022.dev.shared.release\app.exe"
+CALL :TEST_MODULE "app_with_external_static_lib"
 if ERRORLEVEL 1 ( EXIT /B 1 )
 
-CALL :TEST_MODULE "app_with_lib" ".bin\windows.vs2022.dev.shared.release\app.exe"
+CALL :TEST_MODULE "app_with_lib"
 if ERRORLEVEL 1 ( EXIT /B 1 )
 
-CALL :TEST_MODULE "app_with_lib_and_tests" ".bin\windows.vs2022.dev.shared.release\test.exe"
+CALL :TEST_MODULE "app_with_lib_and_tests"
 if ERRORLEVEL 1 ( EXIT /B 1 )
 
-CALL :TEST_MODULE "app_with_local_static_lib" ".bin\windows.vs2022.dev.shared.release\app.exe"
+CALL :TEST_MODULE "app_with_local_static_lib"
 if ERRORLEVEL 1 ( EXIT /B 1 )
 
-CALL :TEST_MODULE "bison_file" ".bin\windows.vs2022.dev.shared.release\app.exe"
+CALL :TEST_MODULE "app_with_thirdparty_dep"
 if ERRORLEVEL 1 ( EXIT /B 1 )
 
-CALL :TEST_MODULE "common_static_lib" ".bin\windows.vs2022.dev.shared.release\app.exe"
+CALL :TEST_MODULE "bison_file"
 if ERRORLEVEL 1 ( EXIT /B 1 )
 
-CALL :TEST_MODULE "detached_lib" ".bin\windows.vs2022.dev.shared.release\app.exe"
+CALL :TEST_MODULE "common_static_lib"
 if ERRORLEVEL 1 ( EXIT /B 1 )
 
-CALL :TEST_MODULE "embed_file" ".bin\windows.vs2022.dev.shared.release\app.exe"
+CALL :TEST_MODULE "detached_lib"
+if ERRORLEVEL 1 ( EXIT /B 1 )
+
+CALL :TEST_MODULE "embed_file"
 if ERRORLEVEL 1 ( EXIT /B 1 )
 
 CALL :TEST_MODULE "module_with_static_lib"
@@ -84,20 +87,11 @@ if ERRORLEVEL 1 (
 	EXIT /B 1
 )
 
-IF NOT "%~2" == "" (
-	if NOT EXIST "%~2" (
-		ECHO No output generated for test '%~1'
-		POPD
-		EXIT /B 1
-	)
-
-	%~2
-
-	if ERRORLEVEL 1 (
-		ECHO Extended test command '%~2' for test '%~1' failed
-		POPD
-		EXIT /B 1
-	)
+%ONION% test
+if ERRORLEVEL 1 (
+	ECHO Failed to run tests for '%~1'
+	POPD
+	EXIT /B 1
 )
 
 POPD
