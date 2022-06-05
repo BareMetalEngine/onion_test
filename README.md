@@ -10,6 +10,7 @@ Test projects for Onion Build System
 | Application with simple library and tests | [![app_with_lib_and_tests](https://github.com/BareMetalEngine/onion_test/actions/workflows/app_with_lib_and_tests.yml/badge.svg?branch=main)](https://github.com/BareMetalEngine/onion_test/actions/workflows/app_with_lib_and_tests.yml) |
 | Application with static lib from LOCAL module | [![app_with_local_static_lib](https://github.com/BareMetalEngine/onion_test/actions/workflows/app_with_local_static_lib.yml/badge.svg?branch=main)](https://github.com/BareMetalEngine/onion_test/actions/workflows/app_with_local_static_lib.yml) |
 | Application with static lib from EXTERNAL module | [![app_with_external_static_lib](https://github.com/BareMetalEngine/onion_test/actions/workflows/app_with_external_static_lib.yml/badge.svg?branch=main)](https://github.com/BareMetalEngine/onion_test/actions/workflows/app_with_external_static_lib.yml) |
+| Application using third party library | [![app_with_thirdparty_dep](https://github.com/BareMetalEngine/onion_test/actions/workflows/app_with_thirdparty_dep.yml/badge.svg?branch=main)](https://github.com/BareMetalEngine/onion_test/actions/workflows/app_with_thirdparty_dep.yml) |
 
 # Advanced tests
 

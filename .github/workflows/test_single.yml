@@ -21,6 +21,7 @@ jobs:
                 C:\onion\onion.exe configure
                 C:\onion\onion.exe make -config=${{matrix.config}} -libs=${{matrix.libs}}
                 C:\onion\onion.exe build
+                C:\onion\onion.exe test
   TestLinux:
     runs-on: ubuntu-latest
     strategy:
@@ -36,3 +37,4 @@ jobs:
                 ~/onion/onion configure
                 ~/onion/onion make -config=${{matrix.config}} -libs=${{matrix.libs}}
                 ~/onion/onion build
+                ~/onion/onion test
