@@ -1,8 +1,10 @@
 #include "build.h"
-#include <zlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <vector>
+
+#include <zlib.h>
 
 const std::string_view InputData = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas, erat at efficitur gravida, augue diam accumsan risus, nec sodales velit dui et quam. Nunc lacus augue, vestibulum et commodo ut, fermentum et est. Ut dignissim ante ac venenatis porttitor. Quisque mattis eu leo non posuere. Maecenas volutpat orci eget urna pellentesque congue. Vivamus molestie, massa a vulputate convallis, quam dui scelerisque tortor, at maximus ipsum purus non arcu. Nam sagittis vel velit ac scelerisque.";
 
