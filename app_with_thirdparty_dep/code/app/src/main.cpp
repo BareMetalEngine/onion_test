@@ -1,7 +1,9 @@
 #include "build.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <string.h>
+#include <string_view>
 #include <vector>
 
 #include <zlib.h>
